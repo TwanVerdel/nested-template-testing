@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "workspace": {
+            "type": "string"
+        }
+    },
+    "variables": {
+        "TemplateURI": "https://raw.githubusercontent.com/TwanVerdel/nested-template-testing/main/TestTemplate-Deployment/NestedTemplate/TestRule1.json"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2022-09-01",
+            "name": "Linked-Template",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "[variables('TemplateURI')]"
+                },
+                "parameters": {
+                    "workspace": {
+                        "value": "[parameters('workspace')]"
+                    }
+                }
+            }
+        }
+    ]
+}
