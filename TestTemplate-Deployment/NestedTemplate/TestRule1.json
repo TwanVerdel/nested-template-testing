@@ -52,30 +52,6 @@
                 },
                 "alertDetailsOverride": null,
                 "customDetails": null,
-                "entityMappings": [
-                    {
-                        "entityType": "Account",
-                        "fieldMappings": [
-                            {
-                                "identifier": "Name",
-                                "columnName": "Name"
-                            },
-                            {
-                                "identifier": "UPNSuffix",
-                                "columnName": "UPNSuffix"
-                            }
-                        ]
-                    },
-                    {
-                        "entityType": "IP",
-                        "fieldMappings": [
-                            {
-                                "identifier": "Address",
-                                "columnName": "CallerIpAddress"
-                            }
-                        ]
-                    }
-                ],
                 "sentinelEntitiesMappings": null,
                 "templateVersion": "2.0.2"
             }
